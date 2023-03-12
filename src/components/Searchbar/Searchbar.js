@@ -18,10 +18,9 @@ export class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (!this.state.value)
-      return  Notiflix.Notify.failure(
-        'Enter seach parameters.')
-       
-  
+      return  Notiflix.Notify.warning(
+        'Please, enter search data...')
+        
     this.props.onSearch(this.state.value);
     this.setState({ value: '' });
   };
@@ -55,10 +54,9 @@ export class Searchbar extends Component {
 }
 
 Notiflix.Notify.init({
-  position: 'right-top',
-  width: '300px',
-  distance: '10px',
-  opacity: 1,
-  rtl: false,
+  width: '400px',
+  position: 'center-top',
+  distance: '100px',
+  fontSize: '20px',
   timeout: 1500,
 });
