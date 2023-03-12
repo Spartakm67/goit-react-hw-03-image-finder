@@ -3,6 +3,9 @@ import { Component } from 'react';
 import { getPhoto } from './Services/getPhoto';
 import { animateScroll as scroll } from 'react-scroll';
 import { Searchbar } from './Searchbar/Searchbar';
+// import ImageGallery from './ImageGallery/ImageGallery';
+// import { ButtonLoadMore } from './Button/Button';
+
 import Notiflix from 'notiflix';
 
 export class App extends Component {
@@ -63,7 +66,7 @@ componentDidUpdate(_, prevState) {
     return (
     <>
     {/* // <Container */}
-      <Searchbar onSearch={this.handleSubmit} />
+        <Searchbar onSearch={this.handleSubmit} />        
     {/* // </Container > */}
     </>
   );
