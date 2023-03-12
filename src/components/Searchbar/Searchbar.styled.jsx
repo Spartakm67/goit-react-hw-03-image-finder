@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
   
-const Searchbar = styled.div`
+const SearchbarContainer = styled.div`
  top: 0;
   left: 0;
   position: sticky;
@@ -34,8 +34,7 @@ const SearchFormButton = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
-  background-size: 40%;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.6;
@@ -66,7 +65,7 @@ const SearchFormInput = styled.input`
   font-size: 20px;
   border: none;
   outline: none;
-  padding-left: 4px;
+  padding-left: 10px;
   padding-right: 4px;
    ::placeholder {
     font: inherit;
@@ -76,6 +75,6 @@ const SearchFormInput = styled.input`
 
 
 export {
-    Searchbar, SearchForm, SearchFormButton,
+    SearchbarContainer, SearchForm, SearchFormButton,
     SearchFormButtonLabel, SearchFormInput
 };

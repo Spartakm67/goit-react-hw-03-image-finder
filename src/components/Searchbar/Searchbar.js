@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import {
-    Seachbar, SearchForm, SearchFormButton,
+    SearchbarContainer, SearchForm, SearchFormButton,
     SearchFormButtonLabel, SearchFormInput
 } from './Searchbar.styled';
 import Notiflix from 'notiflix';
@@ -28,7 +28,7 @@ export class Searchbar extends Component {
 
   render() {
     return (
-      <Seachbar>
+      <SearchbarContainer>
         <SearchForm onSubmit={this.handleSubmit} status={'pending'}>
           <SearchFormInput
             autocomplete="off"
@@ -38,18 +38,18 @@ export class Searchbar extends Component {
             aria-label="Search"
             value={this.state.value}
             onChange={this.handleChange}
-                />
+          />
                 <SearchFormButton type="submit">
-                <BiSearchAlt
+                 <BiSearchAlt
                   style={{
                   height: '32px',
                   width: '32px',
                 }}
-              />
-            <SearchFormButtonLabel>Search</SearchFormButtonLabel>
-          </SearchFormButton>
+                 />
+                  <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+                </SearchFormButton>
         </SearchForm>
-      </Seachbar>
+      </SearchbarContainer>
     );
   }
 }
@@ -60,5 +60,5 @@ Notiflix.Notify.init({
   distance: '10px',
   opacity: 1,
   rtl: false,
-  timeout: 1000,
+  timeout: 1500,
 });

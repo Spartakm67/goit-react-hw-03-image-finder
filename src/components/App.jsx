@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Container } from "./App.styled";
-import { Searchbar } from './Searchbar/Seachbar.styled';
+import { Searchbar } from './Searchbar/Searchbar';
 import Notiflix from 'notiflix';
 
 class App extends Component {
