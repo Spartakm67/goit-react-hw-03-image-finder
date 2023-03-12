@@ -9,12 +9,12 @@ class App extends Component {
     error: '',
     status: 'stoped',
     page: 1,
-    searchParameter: '',
+    searchValue: '',
     showBtn: false,
   };
-onSearch = searchParameter => {
+onSearch = searchValue => {
     this.setState({
-      searchParameter,
+      searchValue,
       // gallery: [],
       // page: 1,
       // status: 'stoped',

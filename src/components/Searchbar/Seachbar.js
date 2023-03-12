@@ -29,7 +29,7 @@ export class Searchbar extends Component {
   render() {
     return (
       <Seachbar>
-        <SearchForm onSubmit={this.handleSubmit}>
+        <SearchForm onSubmit={this.handleSubmit} status={'pending'}>
           <SearchFormInput
             autocomplete="off"
             autofocus
@@ -39,7 +39,7 @@ export class Searchbar extends Component {
             value={this.state.value}
             onChange={this.handleChange}
                 />
-                <SearchFormButton type="submit" className={css.searchFormButton}>
+                <SearchFormButton type="submit">
                 <BiSearchAlt
                   style={{
                   height: '32px',
