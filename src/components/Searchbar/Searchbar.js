@@ -32,7 +32,7 @@ export class Searchbar extends Component {
         <SearchForm onSubmit={this.handleSubmit} status={'pending'}>
           <SearchFormInput
             autocomplete="off"
-            autofocus
+            autoFocus
             type="text"
             placeholder="Search images and photos"
             aria-label="Search"
