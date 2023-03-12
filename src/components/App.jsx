@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { Container } from "./App.styled";
+// import { Container } from "./App.styled";
 import { Searchbar } from './Searchbar/Searchbar';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
 class App extends Component {
   state = {
