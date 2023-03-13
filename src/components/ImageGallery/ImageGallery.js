@@ -1,6 +1,6 @@
 import Loader from '../Loader/Loader';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
-import { ImageGalleryUl } from './ImageGallery.styled';
+import { GalleryUl } from './ImageGallery.styled';
 
 const ImageGallery = ({ status, error, gallery }) => {
   if (status === 'pending') return <Loader />;
@@ -8,11 +8,11 @@ const ImageGallery = ({ status, error, gallery }) => {
   if (status === 'resolved')
     return (
       <>
-        <ImageGalleryUl>
+        <GalleryUl>
           {gallery.map(photo => {
             return <ImageGalleryItem key={photo.id} photo={photo} />;
           })}
-        </ImageGalleryUl>
+        </GalleryUl>
       </>
     );
 

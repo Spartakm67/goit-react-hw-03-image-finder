@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import { ImageItem, Image, ImageModal } from './ImageGalleryItem.styled';
-import ModalWindow from '../Modal/Modal';
+import { ImageItem, Image, ModalImage } from './ImageGalleryItem.styled';
+import Modal from '../Modal/Modal';
 
 class ImageGalleryItem extends Component {
   state = {
@@ -20,9 +20,9 @@ class ImageGalleryItem extends Component {
           <Image src={webformatURL} alt={tags} />
         </ImageItem>
         {this.state.showModal && (
-          <ModalWindow close={this.toggleModal}>
-            <ImageModal src={largeImageURL} alt={tags} />
-          </ModalWindow>
+          <Modal close={this.toggleModal}>
+            <ModalImage src={largeImageURL} alt={tags} />
+          </Modal>
         )}
       </>
     );
