@@ -1,5 +1,4 @@
 import { Component } from 'react';
-// import { Container } from "./App.styled";
 import { getPhoto } from './Services/getPhoto';
 import { animateScroll as scroll } from 'react-scroll';
 import { Searchbar } from './Searchbar/Searchbar';
@@ -17,15 +16,7 @@ export class App extends Component {
     page: 1,
     showBtn: false,
   };
-handleSubmit = searchValue => {
-    this.setState({
-      searchValue,
-      gallery: [],
-      page: 1,
-      status: 'stoped',
-      showBtn: false,
-    });
-  };
+
 componentDidUpdate(_, prevState) {
     const { searchValue, page } = this.state;
 
@@ -55,6 +46,15 @@ componentDidUpdate(_, prevState) {
         });
     }
   }
+  handleSubmit = searchValue => {
+    this.setState({
+      searchValue,
+      gallery: [],
+      page: 1,
+      status: 'stoped',
+      showBtn: false,
+    });
+  };
 
   handleLoad = () => {
     scroll.scrollMore(window.innerHeight - 125);
@@ -62,14 +62,12 @@ componentDidUpdate(_, prevState) {
   };
 
   render() {
-  
+  const { gallery, status, error, showBtn } = this.state;
     return (
     <>
-    {/* // <Container */}
-        <Searchbar onSearch={this.handleSubmit} />
-        {/* <ImageGallery gallery={gallery} status={status} error={error} />
-        {showBtn && <ButtonLoadMore handleLoad={this.handleLoad} />} */}
-    {/* // </Container > */}
+      <Searchbar onSearch={this.handleSubmit} />
+      <ImageGallery gallery={gallery} status={status} error={error} />
+      {showBtn && <ButtonLoadMore handleLoad={this.handleLoad} />}
     </>
   );
   }
