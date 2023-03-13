@@ -3,7 +3,7 @@ const BASE_URL = 'https://pixabay.com/api/';
 
 const number = 12
 
-export function getPhoto(searchText, page) {
-  return fetch(`${BASE_URL}?key=${KEY_API}&q=${searchText}&page=${page}&per_page=${number}
+export function getPhoto(searchValue, page) {
+  return fetch(`${BASE_URL}?key=${KEY_API}&q=${searchValue}&page=${page}&per_page=${number}
 `);
 }
