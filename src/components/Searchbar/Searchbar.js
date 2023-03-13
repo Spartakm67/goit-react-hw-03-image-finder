@@ -18,7 +18,7 @@ export class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (!this.state.value)
-      return  Notiflix.Notify.warning(
+      return  Notiflix.Notify.failure(
         'Please, enter search data...')
         
     this.props.onSearch(this.state.value);

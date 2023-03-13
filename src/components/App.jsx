@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Container } from './App.styled';
 import { getPhoto } from './Services/getPhoto';
 import { animateScroll as scroll } from 'react-scroll';
 import { Searchbar } from './Searchbar/Searchbar';
@@ -64,11 +65,11 @@ componentDidUpdate(_, prevState) {
   render() {
   const { gallery, status, error, showBtn } = this.state;
     return (
-    <>
+    <Container>
       <Searchbar onSearch={this.handleSubmit} />
       <ImageGallery gallery={gallery} status={status} error={error} />
       {showBtn && <ButtonLoadMore handleLoad={this.handleLoad} />}
-    </>
+    </Container>
   );
   }
 };
