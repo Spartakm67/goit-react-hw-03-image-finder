@@ -50,6 +50,13 @@ componentDidUpdate(_, prevState) {
     }
   }
   handleSubmit = searchValue => {
+
+    if (this.state.searchValue === searchValue) {
+      return Notiflix.Notify.warning(
+              `We have already found " ${searchValue} " photos for you before...`
+            );
+    }
+
     this.setState({
       searchValue,
       gallery: [],
