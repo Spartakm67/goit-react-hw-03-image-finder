@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Container } from './App.styled';
-import { getPhoto } from './Services/getPhoto';
+import { getPhoto } from '../Services/getPhoto';
 import { animateScroll as scroll } from 'react-scroll';
 import { Searchbar } from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
