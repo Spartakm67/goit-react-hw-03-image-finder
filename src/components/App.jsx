@@ -36,12 +36,13 @@ componentDidUpdate(_, prevState) {
             isLoading: true,
             showBtn: page < Math.ceil(photo.totalHits / 12),
             searchValue: '',
-          }));
-          if (page === 1) {
-            Notiflix.Notify.success(
-              `We have just found ${photo.totalHits} photos for you...`
-            );
-          }
+          }))
+          //   ;
+          // if (page === 1) {
+          //   Notiflix.Notify.success(
+          //     `We have just found ${photo.totalHits} photos for you...`
+          //   );
+          // }
         })
         .catch(error => {
           this.setState({ error, status: 'rejected' });
