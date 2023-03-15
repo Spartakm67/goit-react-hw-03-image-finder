@@ -35,6 +35,7 @@ componentDidUpdate(_, prevState) {
             status: 'resolved',
             isLoading: true,
             showBtn: page < Math.ceil(photo.totalHits / 12),
+            searchValue: '',
           }));
           if (page === 1) {
             Notiflix.Notify.success(
