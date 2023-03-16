@@ -61,7 +61,7 @@ const SearchFormButtonLabel = styled.span`
 const SearchFormInput = styled.input`
   display: inline-block;
   width: 100%;
-  font: inherit;
+  font-style: inherit;
   font-size: 20px;
   border: none;
   outline: none;
